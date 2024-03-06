@@ -1,14 +1,22 @@
-import logo from './logo.svg';
 import { Banner } from './componentes/banner/Banner.js';
-import CampoTexto from './componentes/CampoTexto/CampoTexto.js';
 import Formulario from './componentes/Formulario/index.js';
+import { useState } from 'react';
+
 
 
 function App() {
+
+  const [colaboradores, setColaboradores] = useState[('')]
+
+  const aoNovoColaboradorAdicionado = (colaborador) => {
+    console.log(colaborador)
+    setColaboradores([...colaboradores, colaborador])
+  }
+
   return (
     <div className="App">
       <Banner/>
-      <Formulario></Formulario>
+      <Formulario aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}></Formulario>
     </div>
   );
 }
