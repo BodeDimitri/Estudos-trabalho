@@ -1,0 +1,8 @@
+{
+    "name": "diego/projeto",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^7.8",
+        "symfony/css-selector": "^5.4"
+    }
+}
